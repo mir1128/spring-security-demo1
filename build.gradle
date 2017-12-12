@@ -12,6 +12,9 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
 apply plugin: 'org.springframework.boot'
 
 group = 'com.example'

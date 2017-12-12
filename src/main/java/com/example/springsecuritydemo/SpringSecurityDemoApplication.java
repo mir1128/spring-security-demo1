@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringSecurityDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityDemoApplication.class, args);
+    }
 }
