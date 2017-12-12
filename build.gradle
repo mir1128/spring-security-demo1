@@ -7,6 +7,7 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("com.puppycrawl.tools:checkstyle:6.11.2")
 	}
 }
 
@@ -31,4 +32,15 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
+}
+
+task checkstyle(type: Checkstyle) {
+	ignoreFailures = true
+	classpath= files()
+	reports{
+		xml {
+			destination "build/checkstyle-result.xml"
+		}
+	}
+
 }
